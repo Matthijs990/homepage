@@ -1,0 +1,5 @@
+ErrorDocument 404 /eigen404.html
+ErrorDocument 401 /eigen401.html
+ErrorDocument 403 /eigen403.html
+ErrorDocument 500 /eigen500.html
+ErrorDocument 203 /eigen203.html
