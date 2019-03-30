@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="eng" lang="eng">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta name="description" content="my test page" />
+   <meta name="keywords" content="test" />
+   <title>test page</title>
+   <style type='text/css'>
+   a { color: rgb(0,0,255); }
+   </style>
+</head>
+<body>
+<input name='name' id='test' text='typ your name' />
+<button onclick='my()'>hello</button>
+<script>
+function my() {
+	var name = document.getElementById('test').value
+
+	var begroeting = ('hallo ' + name);
+	alert(begroeting);
+	}
+</script>
+</body>
+</html>
