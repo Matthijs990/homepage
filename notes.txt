@@ -1,0 +1,7 @@
+if(isset($_GET['name'])) {
+    
+	$intel = $_GET["name"];
+else:
+	$intel = "None"
+}
+om in php te kijken of een site data is opgegeven

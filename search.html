@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="discription" content="the search page of homepage">
+<title>search     homepage-search-page</title>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+}
+
+/* Left column (menu) */
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 65%;
+  padding: 15px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border:1px solid #ddd;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu, #test {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#test li a {
+  backgrxound-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+#myMenu li a {
+  backgrxound-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+#myMenu li a:hover {
+  background-color: #eee;
+}
+#test li a:hover {
+  background-color: #eee;
+}
+
+</style>
+</head>
+<body>
+
+<h2>Search Menu</h2>
+<p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
+
+<div class="row">
+  <div class="left" style="background-color:#bbb;">
+    <h2>Menu</h2>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+	<h3>Menu:</h3>
+    <ul id="myMenu">
+	  <strong>homepage:</strong><br><hr>
+      <li><a href="homepage.html">Homepage</a></li><!--typ in <a ... > replace ... with: onclick="jsfunction()" href="javascript:void(0);" for call function -->
+      <li><a href="index.html">index</a></li>
+	  <li><a href="login.html">login</a></li>
+	  <li><a href="extract.html">extract files with this file extractor</a></li>
+      <li><a href="singup.html">sing up</a></li>
+      <li><a href="register.html">register</a></li>
+      <li><a href="interactief.html">interactief</a></li>
+      <li><a href="tryit.html">tryit(stable)</a></li>
+      <li><a href="tryit.asp">tryit(under devlopment)</a></li>
+	  <li><a href="downloads.html">downloads</a></li>
+	  <strong>downloads:</strong><br><hr>
+      <li><a href="stramien.html" download="stramien.html" target="_blank">stramien.html</a></li>
+      <li><a href="tab.css" download="tab.css" target="_blank">tab.css</a></li>
+	  <strong>os_sys-downloads</strong><br><hr>
+	  <li><a href='exe/os_sys-webinstaller-py3.7.exe' download="os_sys-webinstaller-py3.7.exe">os_sys-installer(py-3.7)</a></li>
+	  <li><a href='exe/os_sys-webinstaller-py3.6.exe' download="os_sys-webinstaller-py3.6.exe">os_sys-installer(py-3.6)</a></li>
+	  <li><a href='exe/os_sys-webinstaller-py3.5.exe' download="os_sys-webinstaller-py3.5.exe">os_sys-installer(py-3.5)</a></li>
+	  <li><a href='exe/os_sys-webinstaller-py3.4.exe' download="os_sys-webinstaller-py3.4.exe">os_sys-installer(py-3.4)</a></li>
+	  <li><a href='exe/os_sys-webinstaller-py3.3.exe' download="os_sys-webinstaller-py3.3.exe">os_sys-installer(py-3.3)</a></li>
+	  <li><a href='exe/os_sys-webinstaller-py3.2.exe' download="os_sys-webinstaller-py3.2.exe">os_sys-installer(py-3.2)</a></li>
+	  <li><a href='exe/os_sys-webinstaller-py3.1.exe' download="os_sys-webinstaller-py3.1.exe">os_sys-installer(py-3.1)</a></li>
+	  <li><a href='exe/os_sys-webinstaller-py3.0.exe' download="os_sys-webinstaller-py3.0.exe">os_sys-installer(py-3.0)</a></li>
+	  
+    </ul>
+	
+  </div>
+
+  <div class="right" style="background-color:#ddd;">
+    <h2>Page Content</h2>
+    <p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
+    <p>this is the search page of homepage. from here you can search in all the pages of homepage.</p>
+    <p>homepage is a page under devlopment. so sometimes it can be possible that somthing doesn't work well if that is the case. pleas try to reach
+	 the page that you want from a other page or typ the whole url.</p>
+    <p>this site is still under devlopment.</p>
+	
+
+<script>
+
+function myFunction() {
+  var input, filter, ul, li, a, i, lat, g;
+  /*the 2 new names you use you need to typ up here*/;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  /*to add a other list you do:
+  ul = document.getElementById("#menu name");
+  #list_name = (ul.getElementsByTagName("li"));*/
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+	
+	}
+  
+
+  
+  
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="eng" lang="eng">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.header h2 {
+  text-align: center;
+}
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #4caf50;
+  width: 0%;
+}
+
+.content {
+  padding: 100px 0;
+  margin: 50px auto 0 auto;
+  width: 80%;
+}
+</style>
+
+
+<div class="header">
+  
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+</div>
+
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta name="description" content="beschrijving van de webpagina" />
+   <meta name="keywords" content="the index of homepage" />
+   <title>homepage index</title>
+   <style type='text/css'>
+   h1 { text-align: center; color: rgb(255,40,21); background-color: rgb(255,255,255); }
+   a { color: rgb(0,0,255); }
+   </style>
+</head>
+<body>
+<div class="header">
+  
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+</div>
+	<h1 border="10px rgb(0,0,0) dotted">index</h1>
+	<p>
+	this is the index page from homepage. <a href='homepage.html'>click here</a> to go to the homepage
+	</p>
+	<h2>index</h2>
+	<p>
+	<li><a href='#homepage'>homepage</a></li>
+	<li><a href='#os_sys'>os_sys</a></li>
+	<li><a href='#html_examples'>html_examples</a></li>
+	<ol>
+		<li id='homepage'>homepage:
+			<ul>
+				<li><a href='homepage.html'>homepage</a></li>
+				<li><a href='index.html'>index</a></li>
+				<li><a href="search.html">search</a></li>
+				<li><a href='extract.html'>extract files with exctract</a></li>
+				<li><a href="register.html">register</a></li>
+				<li><a href="singup.html">sing-up</a></li>
+				<li><a href="singin.html">sing-in</a></li>
+				<li><a href="login.html">login</a></li>
+				<li><a href="tryit.asp">tryit</a></li>
+				<li><a href="tryit.html">tryit(simple html for slow pc's or wifi connections)</a></li>
+				<li><a href="demo's.html">demo's</a></li>
+				<li><a href="downloads.html">downloads</a></li>
+			</ul>
+		</li>
+		<li id='os_sys'>os_sys:
+			<ul>
+				<li><a href='os_sys/os_sys-homepage.html'>homepage</a></li>
+				<li><a href='os_sys/index.html'>index</a></li>
+				<li><a href='os_sys/os_sys.html'>first</a></li>
+				<li><a href='os_sys/tabel.html'>detail index</a></li>
+			</ul>
+		</li>
+		<li id='html_examples'>html_examples:
+			<ul>
+				<li><a href='test/hoi.html'>hoi program</a></li>
+				<li><a href='test/calculator.html'>calculator</a></li>
+				<li><a href="tryit.asp">tryit</a></li>
+				<li><a href="tryit.html">tryit(html for slow wifi connections)</a></li>
+			</ul>
+		</li>
+	</ol>
+	</p>
+<script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+<script>
+function copy(myvar) {
+  var copyText = document.getElementById(myvar);
+  copyText.select();
+  document.execCommand("copy");
+}
+</script>
+</body>
+</html>
